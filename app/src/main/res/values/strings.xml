@@ -1,0 +1,8 @@
+<resources>
+  <string name="app_name">Mission Seattle</string>
+  <string name="seattle_marker_title">Center of Seattle</string>
+  <string name="venue_item_distance_text">Distance: %.2f meters</string>
+  <string name="venue_detail_distance_text">Distance: %.2f meters</string>
+  <string name="venue_detail_category_text">Category:  %1$s</string>
+  <string name="venue_detail_address_text">Address: %1$s</string>
+</resources>

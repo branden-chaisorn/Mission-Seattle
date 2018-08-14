@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5b70e89b4c1f670f30b9cec3"
+  },
+  "response": {
+    "venues": [
+      {
+        "id": "593e1dbefc9e940adf207cbe",
+        "name": "U.S. Bank ATM",
+        "contact": {
+
+        },
+        "location": {
+          "address": "1508 7th Ave",
+          "lat": 47.61179097,
+          "lng": 122.333508,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 47.61179097,
+              "lng": 122.333508
+            }
+          ],
+          "distance": 631,
+          "cc": "CN",
+          "city": "Seattle",
+          "state": "WA",
+          "country": "China",
+          "formattedAddress": [
+            "1508 7th Ave",
+            "Seattle",
+            "WA",
+            "China"
+          ]
+        },
+        "categories": [
+          {
+            "id": "52f2ab2ebcbc57f1066b8b56",
+            "name": "ATM",
+            "pluralName": "ATMs",
+            "shortName": "ATM",
+            "icon": {
+              "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/financial_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": [
+
+          ]
+        },
+        "referralId": "v-1534126235",
+        "venueChains": [
+
+        ],
+        "hasPerk": false
+      },
+      {
+        "id": "4fd541fce4b0ba0232ea8690",
+        "name": "Seattle",
+        "contact": {
+
+        },
+        "location": {
+          "lat": 47.59500262477,
+          "lng": 122.33169910087,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 47.59500262477,
+              "lng": 122.33169910087
+            }
+          ],
+          "distance": 1246,
+          "cc": "CN",
+          "country": "China",
+          "formattedAddress": [
+            "China"
+          ]
+        },
+        "categories": [
+
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": [
+
+          ]
+        },
+        "referralId": "v-1534126235",
+        "venueChains": [
+
+        ],
+        "hasPerk": false
+      },
+      {
+        "id": "593e1f0db2958f03712a72b9",
+        "name": "U.S. Bank ATM",
+        "contact": {
+
+        },
+        "location": {
+          "address": "2550 32nd Ave W",
+          "lat": 47.64253616,
+          "lng": 122.397934,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 47.64253616,
+              "lng": 122.397934
+            }
+          ],
+          "distance": 6384,
+          "cc": "CN",
+          "city": "Seattle",
+          "state": "WA",
+          "country": "China",
+          "formattedAddress": [
+            "2550 32nd Ave W",
+            "Seattle",
+            "WA",
+            "China"
+          ]
+        },
+        "categories": [
+          {
+            "id": "52f2ab2ebcbc57f1066b8b56",
+            "name": "ATM",
+            "pluralName": "ATMs",
+            "shortName": "ATM",
+            "icon": {
+              "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/financial_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": true,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": [
+
+          ]
+        },
+        "referralId": "v-1534126235",
+        "venueChains": [
+
+        ],
+        "hasPerk": false
+      },
+      {
+        "id": "593e29f9f1fdaf5a5afad785",
+        "name": "U.S. Bank ATM",
+        "contact": {
+
+        },
+        "location": {
+          "address": "100 Northwest 85th St",
+          "lat": 47.69065462,
+          "lng": 122.3581937,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": 47.69065462,
+              "lng": 122.3581937
+            }
+          ],
+          "distance": 9602,
+          "cc": "CN",
+          "city": "Seattle",
+          "state": "WA",
+          "country": "China",
+          "formattedAddress": [
+            "100 Northwest 85th St",
+            "Seattle",
+            "WA",
+            "China"
+          ]
+        },
+        "categories": [
+          {
+            "id": "52f2ab2ebcbc57f1066b8b56",
+            "name": "ATM",
+            "pluralName": "ATMs",
+            "shortName": "ATM",
+            "icon": {
+              "prefix": "https:\/\/ss3.4sqi.net\/img\/categories_v2\/shops\/financial_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "tipCount": 0,
+          "usersCount": 0,
+          "checkinsCount": 0,
+          "visitsCount": 0
+        },
+        "beenHere": {
+          "count": 0,
+          "lastCheckinExpiredAt": 0,
+          "marked": false,
+          "unconfirmedCount": 0
+        },
+        "hereNow": {
+          "count": 0,
+          "summary": "Nobody here",
+          "groups": [
+
+          ]
+        },
+        "referralId": "v-1534126235",
+        "venueChains": [
+
+        ],
+        "hasPerk": false
+      }
+    ],
+    "confident": true
+  }
+}
