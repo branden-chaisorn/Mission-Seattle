@@ -56,13 +56,19 @@ class MainActivity : AppCompatActivity() {
     venueAdapter.notifyDataSetChanged()
   }
 
+  public override fun onPause() {
+    super.onPause()
+    queryTextSub.dispose()
+  }
+
   private fun queryVenues() {
     queryTextSub = RxTextView.textChanges(queryInputLayout.editText!!)
       .subscribeOn(Schedulers.io())
       .observeOn(AndroidSchedulers.mainThread())
       .debounce(DEBOUNCE_TIME, TimeUnit.MILLISECONDS)
       .flatMap { query ->
-        networkService.getVenues(getQueryOptionMap(query.toString()))
+        networkService
+          .getVenues(getQueryOptionMap(query.toString()))
           .subscribeOn(Schedulers.io())
           .observeOn(AndroidSchedulers.mainThread())
       }
@@ -71,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         venueList = venues
         venueAdapter.setVenues(venues)
         venueAdapter.notifyDataSetChanged()
-      }, { e -> Log.d(TAG, e.printStackTrace().toString())})
+      }, { e -> Log.e(TAG, e.printStackTrace().toString())})
   }
 
   private fun getQueryOptionMap(query: String): Map<String, String> {

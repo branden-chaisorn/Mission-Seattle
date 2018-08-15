@@ -2,6 +2,7 @@ package com.test.bchaisorn.missionseattle.dagger
 
 import android.app.Application
 import android.content.Context
+import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.test.bchaisorn.missionseattle.models.Location
 import com.test.bchaisorn.missionseattle.network.AuthorizationInterceptor
@@ -20,28 +21,29 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 
 
 @Module
-class ApplicationModule(application: Application) {
-  private val applicationContext: Context
+class ApplicationModule(private val application: Application) {
 
-  init {
-    applicationContext = application
+  @Provides
+  @Singleton
+  fun providesGson(): Gson {
+    return GsonBuilder().registerTypeAdapter(Location::class.java, LocationDeserializer()).create()
   }
 
   @Provides
   @Singleton
-  fun provideNetworkService(): NetworkService {
-    val httpClient = OkHttpClient.Builder()
+  fun providesOkHttpClient(): OkHttpClient {
+    return OkHttpClient.Builder()
       .addNetworkInterceptor(AuthorizationInterceptor())
       .build()
+  }
 
-    // Registering custom type adapter instead of using the annotation so that I can implement a test version
-    // that does not use the android distanceTo call
-    val gsonBuilder = GsonBuilder()
-    gsonBuilder.registerTypeAdapter(Location::class.java, LocationDeserializer())
+  @Provides
+  @Singleton
+  fun provideNetworkService(gson: Gson, httpClient: OkHttpClient): NetworkService {
 
     return Retrofit.Builder()
       .baseUrl(BASE_URL)
-      .addConverterFactory(GsonConverterFactory.create(gsonBuilder.create()))
+      .addConverterFactory(GsonConverterFactory.create(gson))
       .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
       .client(httpClient)
       .build()
@@ -51,7 +53,7 @@ class ApplicationModule(application: Application) {
   @Provides
   @Singleton
   internal fun provideFavoriteVenueStore(): FavoriteVenueStore {
-    return FavoriteVenueStoreImpl(applicationContext.getSharedPreferences(favoriteVenueStoreKey, Context.MODE_PRIVATE))
+    return FavoriteVenueStoreImpl(application.getSharedPreferences(favoriteVenueStoreKey, Context.MODE_PRIVATE))
   }
 
   companion object {

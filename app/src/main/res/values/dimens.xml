@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-  <dimen name="margin_med" tools:ignore="UnusedResources">12dp</dimen>
+<resources>
+  <dimen name="margin_xl">24dp</dimen>
+  <dimen name="margin_large">16dp</dimen>
+  <dimen name="margin_med">12dp</dimen>
+  <dimen name="margin_small">8dp</dimen>
+  <dimen name="map_detail_height">256dp</dimen>
+  <dimen name="padding_med">12dp</dimen>
 </resources>

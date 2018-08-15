@@ -20,6 +20,7 @@ class VenueAdapter(private var context: Context, private val favoriteVenueStore:
     this.venues = venues
   }
 
+  // KAE caches view references so there is no need to store them in the ViewHolder, it would have no impact on performance
   override fun onBindViewHolder(holder: VenueViewHolder, position: Int) {
     val currentVenue = venues[position]
     holder.venueItemLayout.venue_item_name.text = currentVenue.name

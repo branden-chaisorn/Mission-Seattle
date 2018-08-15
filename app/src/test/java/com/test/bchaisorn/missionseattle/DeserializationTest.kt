@@ -28,7 +28,7 @@ class DeserializationTest {
   lateinit var networkService : NetworkService
 
   @Before
-  @Throws fun setUp() {
+  fun setUp() {
     mockServer = MockWebServer()
     mockServer.start(8080)
 

@@ -13,4 +13,4 @@ import kotlinx.android.parcel.Parcelize
  */
 
 @Parcelize
-data class Location (val address: String?, val latLng: LatLng, val distanceToSeattle: Float): Parcelable
+data class Location (var address: String? = "no address", val latLng: LatLng, val distanceToSeattle: Float): Parcelable

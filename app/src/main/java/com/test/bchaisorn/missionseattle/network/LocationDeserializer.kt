@@ -9,7 +9,7 @@ import com.google.gson.JsonParseException
 import com.test.bchaisorn.missionseattle.models.Location
 import java.lang.reflect.Type
 
-/** Custom Location Deserializer**/
+/** Custom Location Deserializer **/
 
 class LocationDeserializer : JsonDeserializer<Location> {
 

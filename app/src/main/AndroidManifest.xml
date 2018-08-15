@@ -26,8 +26,7 @@
       </intent-filter>
     </activity>
     <activity android:name=".MapActivity"/>
-    <activity android:name=".VenueDetailActivity">
-    </activity>
+    <activity android:name=".VenueDetailActivity"/>
   </application>
 
 </manifest>
