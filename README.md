@@ -38,6 +38,7 @@ launches of the app, and should show correctly on both the main and details scre
     - ./gradlew test
 - Run app
     - Copy debug.keystore to your root android folder (~/.android/debug.keystore on Mac) and run via Android studio.
+    This is required to run Google Maps without a release APK and signing.
 
 ## Assumptions
 - Zoom controls are not required.
