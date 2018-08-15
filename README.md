@@ -104,6 +104,10 @@ available and display them in a swipeable view pager.
 - Fully automated build system. On a larger scale having thorough testing on the
 whole code base. I would additionally spend time to generate some code coverage metrics
 (though that metric and chasing 100% isn't always a worth while goal).
+- I had trouble with finding any venues with URLs from the search api. In the future, if the details page needed
+to be more fleshed out, I would query the venue details API foursquare has and display information from that response
+in the venue detail section. The venue details API seems to have possibly a different URL than one that would be given from
+the search api.
 - Find a replacement for Findbugs for Kotlin to find simple code mistakes.
 - Make more improvements on the venue detail UI
 - Add Crashlytics or some sort of analytics around crashes so debugging would be easier
