@@ -37,7 +37,7 @@ launches of the app, and should show correctly on both the main and details scre
 - Run unit tests
     - ./gradlew test
 - Run app
-    - Copy debug.keystore to your root android folder (~/.android/debug.keystore on Mac) and run.
+    - Copy debug.keystore to your root android folder (~/.android/debug.keystore on Mac) and run via Android studio.
 
 ## Assumptions
 - Zoom controls are not required.
@@ -62,7 +62,7 @@ because it felt more natural for it to be there.
     Also, because of it's wide adoption, there exist many add ons to it that allow for easy JSON parsing, and even
     hooks for RxJava compatibility.
 - Dagger 2
-    - Dagger 2 was used here in order to prepare for larger development. In a larger app injecting dependencies
+    - Dagger 2 was used here in order to prepare for larger development. In a larger app, injecting dependencies
     through Dagger makes using said dependencies much easier. Traditionally one can create a static DI context
     and use this gain DI in classes that can't be traditionally injected. Additionally, setting up Dagger for
     test instances provides an easy way to change dependencies to test implementations so you can mock out things
@@ -89,7 +89,7 @@ it clouds system logic, as well as makes testing business logic there require An
 - Loading the map before possibly having a list of venues a real situation that can occur here. In this case,
 I'm just rendering an empty map with the center of Seattle marked. However, in a production like environment I would
 potentially make some sort of cache that would house all the venues from a given query. That way, no matter what's loaded
-or not, we could pull from the cache and show something. Whether that would be an in-memory cache or persisted would depend
+or not, we could pull from the cache and show something or nothing if the cache was completely empty. Whether that would be an in-memory cache or persisted would depend
 on factors such as venue list size, etc.
 - Adding zoom support and more controls with the map is something I would like to do given more time. Right now
 I passed on this because users still have the option to view Google Maps via the button on the map. At that time
@@ -99,7 +99,7 @@ Sqlite or even Realm.
 - I did not write any functional tests here give the relatively straightforward UI of the app. With a production
 app I would have functional tests on UI components, especially if they were reactive to ensure that things were being
 displayed when I expect them to.
-- I would like to show more on the venue detail screen. There I would query for the venue's images if they were
+- I would like to show more on the venue detail screen as well as clean it up to make it more visual appealing. There I would query for the venue's images if they were
 available and display them in a swipeable view pager.
 - Fully automated build system. On a larger scale having thorough testing on the
 whole code base. I would additionally spend time to generate some code coverage metrics
