@@ -40,30 +40,33 @@ class VenueDetailActivity : AppCompatActivity(), OnMapReadyCallback {
     venue_detail_distance.text = getString(R.string.venue_detail_distance_text, venue.location.distanceToSeattle)
     venue_detail_url.text = venue.url
     venue_detail_address.text = getString(R.string.venue_detail_address_text, venue.location.address)
+
     if (!venue.categories.isEmpty()) {
       venue_detail_category.text = getString(R.string.venue_detail_category_text, venue.categories[0].name)
-
     }
   }
 
   override fun onMapReady(googleMap: GoogleMap) {
+    // Note that liteMode was used for the detail map. Since it's a static image the map loads much faster this way, though
+    // there are missing features such as zoom and panning.
     map = googleMap
 
-    // Add a marker in Sydney and move the camera
     val seattle = LatLng(SEATTLE_LAT, SEATTLE_LNG)
     map.addMarker(MarkerOptions().position(seattle).title(getString(seattle_marker_title)))
     map.addMarker(MarkerOptions().position(venue.location.latLng).title(venue.name)).showInfoWindow()
+    // Just setting the zoom to a level of 14 here because it handles most cases. Ideally I would have zoom controls
+    // and give the user that flexibility.
     map.moveCamera(CameraUpdateFactory.newLatLngZoom(seattle, 14f))
 
   }
 
-  fun toggleFavoriteVenue(): Boolean {
-    if (!favoriteVenueStore.containsVenue(venue.id)) {
+  private fun toggleFavoriteVenue(): Boolean {
+    return if (!favoriteVenueStore.containsVenue(venue.id)) {
       favoriteVenueStore.addVenue(venue.id)
-      return true
+      true
     } else {
       favoriteVenueStore.removeVenue(venue.id)
-      return false
+      false
     }
   }
 

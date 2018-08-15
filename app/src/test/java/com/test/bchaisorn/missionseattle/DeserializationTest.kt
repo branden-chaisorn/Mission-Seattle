@@ -58,6 +58,7 @@ class DeserializationTest {
     val mockResponse = MockResponse()
       .setResponseCode(200)
       .setBody(TestUtils().getJson("testResponse.json"))
+
     // Enqueue request
     mockServer.enqueue(mockResponse)
 

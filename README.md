@@ -35,7 +35,7 @@ launches of the app, and should show correctly on both the main and details scre
 
 ## How-To
 - Run unit tests
-    - ./gradlew clean check
+    - ./gradlew test
 - Run app
     - Copy debug.keystore to your root android folder (~/.android/debug.keystore on Mac) and run.
 
@@ -96,6 +96,9 @@ I passed on this because users still have the option to view Google Maps via the
 the user can get more information about the location via the map.
 - Given more time and a larger scale app I would really like to use a more formal storage format such as
 Sqlite or even Realm.
+- I did not write any functional tests here give the relatively straightforward UI of the app. With a production
+app I would have functional tests on UI components, especially if they were reactive to ensure that things were being
+displayed when I expect them to.
 - I would like to show more on the venue detail screen. There I would query for the venue's images if they were
 available and display them in a swipeable view pager.
 - Fully automated build system. On a larger scale having thorough testing on the
