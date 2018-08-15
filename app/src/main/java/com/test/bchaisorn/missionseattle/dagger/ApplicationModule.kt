@@ -7,7 +7,7 @@ import com.google.gson.GsonBuilder
 import com.test.bchaisorn.missionseattle.models.Location
 import com.test.bchaisorn.missionseattle.network.AuthorizationInterceptor
 import com.test.bchaisorn.missionseattle.network.LocationDeserializer
-import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.network.VenueApi
 import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStoreImpl
 import javax.inject.Singleton
@@ -39,7 +39,7 @@ class ApplicationModule(private val application: Application) {
 
   @Provides
   @Singleton
-  fun provideNetworkService(gson: Gson, httpClient: OkHttpClient): NetworkService {
+  fun provideNetworkService(gson: Gson, httpClient: OkHttpClient): VenueApi {
 
     return Retrofit.Builder()
       .baseUrl(BASE_URL)
@@ -47,7 +47,7 @@ class ApplicationModule(private val application: Application) {
       .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
       .client(httpClient)
       .build()
-      .create<NetworkService>(NetworkService::class.java)
+      .create<VenueApi>(VenueApi::class.java)
   }
 
   @Provides

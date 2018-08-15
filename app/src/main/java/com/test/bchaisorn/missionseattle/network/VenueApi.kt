@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.QueryMap
 
 
-interface NetworkService {
+interface VenueApi {
 
     @GET("v2/venues/search")
     fun getVenues(@QueryMap options: Map<String, String>): Observable<BaseResponse>

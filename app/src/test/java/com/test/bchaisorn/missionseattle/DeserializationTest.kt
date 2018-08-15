@@ -1,7 +1,7 @@
 package com.test.bchaisorn.missionseattle
 
 import com.test.bchaisorn.missionseattle.network.AuthorizationInterceptor
-import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.network.VenueApi
 import io.reactivex.observers.TestObserver
 import junit.framework.Assert.assertEquals
 import okhttp3.OkHttpClient
@@ -25,7 +25,7 @@ import com.test.bchaisorn.missionseattle.models.*
 class DeserializationTest {
 
   lateinit var mockServer : MockWebServer
-  lateinit var networkService : NetworkService
+  lateinit var venueApi : VenueApi
 
   @Before
   fun setUp() {
@@ -48,7 +48,7 @@ class DeserializationTest {
       .client(okHttpClient)
       .build()
 
-    networkService = retrofit.create(NetworkService::class.java)
+    venueApi = retrofit.create(VenueApi::class.java)
   }
 
   @Test
@@ -62,7 +62,7 @@ class DeserializationTest {
     mockServer.enqueue(mockResponse)
 
     // Call the API
-    networkService.getVenues(mapOf(
+    venueApi.getVenues(mapOf(
       "query" to "potato",
       "near" to "Seattle",
       "limit" to "20"
@@ -93,7 +93,7 @@ class DeserializationTest {
     mockServer.enqueue(mockReponse)
 
     // Call the API
-    networkService.getVenues(mapOf(
+    venueApi.getVenues(mapOf(
       "query" to "potato",
       "near" to "Seattle",
       "limit" to "20"

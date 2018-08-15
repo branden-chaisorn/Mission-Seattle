@@ -10,7 +10,7 @@ import android.util.Log
 import android.view.View
 import com.jakewharton.rxbinding2.widget.RxTextView
 import com.test.bchaisorn.missionseattle.models.Venue
-import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.network.VenueApi
 import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
   private lateinit var layoutManager: RecyclerView.LayoutManager
 
   @Inject
-  lateinit var networkService: NetworkService
+  lateinit var venueApi: VenueApi
 
   @Inject
   lateinit var favoriteVenueStore: FavoriteVenueStore
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
       .observeOn(AndroidSchedulers.mainThread())
       .debounce(DEBOUNCE_TIME, TimeUnit.MILLISECONDS)
       .flatMap { query ->
-        networkService
+        venueApi
           .getVenues(getQueryOptionMap(query.toString()))
           .subscribeOn(Schedulers.io())
           .observeOn(AndroidSchedulers.mainThread())
