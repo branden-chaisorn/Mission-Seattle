@@ -1,9 +1,9 @@
 package com.test.bchaisorn.missionseattle
 
 import android.app.Application
-import com.test.bchaisorn.missionseattle.Dagger.ApplicationComponent
-import com.test.bchaisorn.missionseattle.Dagger.ApplicationModule
-import com.test.bchaisorn.missionseattle.Dagger.DaggerApplicationComponent
+import com.test.bchaisorn.missionseattle.dagger.ApplicationComponent
+import com.test.bchaisorn.missionseattle.dagger.ApplicationModule
+import com.test.bchaisorn.missionseattle.dagger.DaggerApplicationComponent
 
 class MainApplication : Application() {
 

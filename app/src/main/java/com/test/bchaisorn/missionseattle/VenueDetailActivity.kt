@@ -7,12 +7,10 @@ import android.view.MenuItem
 import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
-import com.squareup.picasso.Picasso
-import com.test.bchaisorn.missionseattle.Models.Venue
+import com.test.bchaisorn.missionseattle.models.Venue
 import com.test.bchaisorn.missionseattle.R.string.seattle_marker_title
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStore
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 import kotlinx.android.synthetic.main.activity_venue_detail.*
-import kotlinx.android.synthetic.main.venue_item_layout.*
 import javax.inject.Inject
 
 class VenueDetailActivity : AppCompatActivity(), OnMapReadyCallback {

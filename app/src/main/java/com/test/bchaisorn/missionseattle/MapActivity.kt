@@ -7,7 +7,7 @@ import com.google.android.gms.maps.*
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
-import com.test.bchaisorn.missionseattle.Models.Venue
+import com.test.bchaisorn.missionseattle.models.Venue
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 

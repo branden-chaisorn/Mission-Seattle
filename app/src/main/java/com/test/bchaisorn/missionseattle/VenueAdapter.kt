@@ -2,16 +2,15 @@ package com.test.bchaisorn.missionseattle
 
 import android.content.Context
 import android.content.Intent
-import android.provider.Settings.Global.getString
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.RecyclerView.ViewHolder
 import android.view.View
 import android.view.ViewGroup
-import com.test.bchaisorn.missionseattle.Models.Venue
+import com.test.bchaisorn.missionseattle.models.Venue
 import android.view.LayoutInflater
 import kotlinx.android.synthetic.main.venue_item_layout.view.*
 import com.squareup.picasso.Picasso
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStore
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 
 class VenueAdapter(private var context: Context, private val favoriteVenueStore: FavoriteVenueStore) : RecyclerView.Adapter<VenueAdapter.VenueViewHolder>() {
 

@@ -1,7 +1,7 @@
 package com.test.bchaisorn.missionseattle
 
-import com.test.bchaisorn.missionseattle.Network.AuthorizationInterceptor
-import com.test.bchaisorn.missionseattle.Network.NetworkService
+import com.test.bchaisorn.missionseattle.network.AuthorizationInterceptor
+import com.test.bchaisorn.missionseattle.network.NetworkService
 import io.reactivex.observers.TestObserver
 import junit.framework.Assert.assertEquals
 import okhttp3.OkHttpClient
@@ -18,7 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 import com.google.android.gms.maps.model.LatLng
 import com.google.gson.*
-import com.test.bchaisorn.missionseattle.Models.*
+import com.test.bchaisorn.missionseattle.models.*
 
 
 @RunWith(JUnit4::class)

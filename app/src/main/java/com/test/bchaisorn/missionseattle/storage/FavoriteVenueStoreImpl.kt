@@ -1,4 +1,4 @@
-package com.test.bchaisorn.missionseattle.Storage
+package com.test.bchaisorn.missionseattle.storage
 
 import android.content.SharedPreferences
 

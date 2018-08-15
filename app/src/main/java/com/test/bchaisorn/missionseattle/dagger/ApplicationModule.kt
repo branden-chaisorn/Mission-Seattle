@@ -1,15 +1,14 @@
-package com.test.bchaisorn.missionseattle.Dagger
+package com.test.bchaisorn.missionseattle.dagger
 
 import android.app.Application
 import android.content.Context
-import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.test.bchaisorn.missionseattle.Models.Location
-import com.test.bchaisorn.missionseattle.Network.AuthorizationInterceptor
-import com.test.bchaisorn.missionseattle.Network.LocationDeserializer
-import com.test.bchaisorn.missionseattle.Network.NetworkService
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStore
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStoreImpl
+import com.test.bchaisorn.missionseattle.models.Location
+import com.test.bchaisorn.missionseattle.network.AuthorizationInterceptor
+import com.test.bchaisorn.missionseattle.network.LocationDeserializer
+import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStoreImpl
 import javax.inject.Singleton
 
 import dagger.Module

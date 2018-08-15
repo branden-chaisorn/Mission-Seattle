@@ -1,4 +1,4 @@
-package com.test.bchaisorn.missionseattle.Network
+package com.test.bchaisorn.missionseattle.network
 
 import android.location.Location.distanceBetween
 import com.google.android.gms.maps.model.LatLng
@@ -6,11 +6,10 @@ import com.google.gson.JsonDeserializationContext
 import com.google.gson.JsonDeserializer
 import com.google.gson.JsonElement
 import com.google.gson.JsonParseException
-import com.test.bchaisorn.missionseattle.Models.Location
+import com.test.bchaisorn.missionseattle.models.Location
 import java.lang.reflect.Type
 
-/** Custom TypingIndicatorEvent Deserializer. This is needed because we need some form of UID for each event and due
-to payload size restrictions, we have to add our own locally.**/
+/** Custom Location Deserializer**/
 
 class LocationDeserializer : JsonDeserializer<Location> {
 

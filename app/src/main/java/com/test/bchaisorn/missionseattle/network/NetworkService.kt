@@ -1,6 +1,6 @@
-package com.test.bchaisorn.missionseattle.Network
+package com.test.bchaisorn.missionseattle.network
 
-import com.test.bchaisorn.missionseattle.Models.BaseResponse
+import com.test.bchaisorn.missionseattle.models.BaseResponse
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.QueryMap

@@ -9,9 +9,9 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.View
 import com.jakewharton.rxbinding2.widget.RxTextView
-import com.test.bchaisorn.missionseattle.Models.Venue
-import com.test.bchaisorn.missionseattle.Network.NetworkService
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStore
+import com.test.bchaisorn.missionseattle.models.Venue
+import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers

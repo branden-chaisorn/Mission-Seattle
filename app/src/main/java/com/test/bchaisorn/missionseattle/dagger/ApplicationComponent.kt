@@ -1,8 +1,8 @@
-package com.test.bchaisorn.missionseattle.Dagger
+package com.test.bchaisorn.missionseattle.dagger
 
 import com.test.bchaisorn.missionseattle.MainActivity
-import com.test.bchaisorn.missionseattle.Network.NetworkService
-import com.test.bchaisorn.missionseattle.Storage.FavoriteVenueStore
+import com.test.bchaisorn.missionseattle.network.NetworkService
+import com.test.bchaisorn.missionseattle.storage.FavoriteVenueStore
 import com.test.bchaisorn.missionseattle.VenueDetailActivity
 import dagger.Component
 import javax.inject.Singleton

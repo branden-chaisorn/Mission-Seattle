@@ -1,4 +1,4 @@
-package com.test.bchaisorn.missionseattle.Network
+package com.test.bchaisorn.missionseattle.network
 
 import okhttp3.Interceptor
 import okhttp3.Response

@@ -1,4 +1,4 @@
-package com.test.bchaisorn.missionseattle.Storage
+package com.test.bchaisorn.missionseattle.storage
 
 /**
  * FavoriteVenueStore is a storage interface that will simply store a venueId. I opted for this interface so that the
