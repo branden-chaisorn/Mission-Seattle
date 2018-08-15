@@ -17,9 +17,10 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWin
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_maps)
-
-    for (venue in intent.extras.getParcelableArray(VENUE_LIST_EXTRA).toList() as List<Venue>) {
-      venueMap[venue.name] = venue
+    if (intent.extras.getParcelableArray(VENUE_LIST_EXTRA) != null) {
+      for (venue in intent.extras.getParcelableArray(VENUE_LIST_EXTRA).toList() as List<Venue>) {
+        venueMap[venue.name] = venue
+      }
     }
     // Obtain the SupportMapFragment and get notified when the map is ready to be used.
     val mapFragment = supportFragmentManager
