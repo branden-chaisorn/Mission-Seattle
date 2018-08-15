@@ -56,6 +56,11 @@ class MainActivity : AppCompatActivity() {
     venueAdapter.notifyDataSetChanged()
   }
 
+  public override fun onDestroy() {
+    super.onDestroy()
+    queryTextSub.dispose()
+  }
+
   private fun queryVenues() {
     queryTextSub = RxTextView.textChanges(queryInputLayout.editText!!)
       .subscribeOn(Schedulers.io())
